@@ -9,3 +9,29 @@ body {
   font-family: "work Sans", sans-serif;
 }
 /* end global rules */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(137, 94, 94);
+}
+/* small */
+@media (min-width: 786px) {
+  .container {
+    width: 750px;
+  }
+}
+/* meduim */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* larg */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
