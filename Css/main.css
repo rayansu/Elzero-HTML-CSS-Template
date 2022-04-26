@@ -8,14 +8,13 @@
 body {
   font-family: "work Sans", sans-serif;
 }
-/* end global rules */
 
 .container {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(137, 94, 94);
+  background-color: rgb(0, 0, 0);
 }
 /* small */
 @media (min-width: 786px) {
@@ -34,4 +33,107 @@ body {
   .container {
     width: 1170px;
   }
+}
+/* start global rules */
+
+/* Start Header */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ajustement  de la taille du logo */
+header .logo {
+  width: 164px;
+}
+
+/* création de l'icone manuellemnet  */
+
+header .links {
+  position: relative;
+}
+header .links .icon:hover span:nth-child(2) {
+  width: 100%;
+}
+
+header .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+/*  test sur la transition 
+header .links .para {
+  background-color: white;
+  width: 400px;
+  height: 200;
+  transition-duration: 1s;
+  transition-delay: 1s;
+  transition-property: margin-left, margin-top;
+}
+header .links .para:hover {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 600px;
+} */
+
+header .links .icon span {
+  background-color: rgba(23, 149, 9, 0.909);
+  margin-bottom: 5px;
+  height: 2px;
+}
+
+header .links .icon span:first-child {
+  width: 100%;
+}
+
+header .links .icon span:nth-child(2) {
+  width: 50%;
+  transition: 0.3s;
+}
+
+header .links .icon span:last-child {
+  width: 100%;
+}
+
+header .links ul {
+  list-style: none;
+  margin: 0px;
+  position: absolute;
+  right: 0px;
+  background-color: #aa866ce4;
+  padding: 31px;
+  width: 15em;
+  display: none;
+}
+
+header .links ul::before {
+  /* le les links  ne sont pas affichés  */
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: red green blue black;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+}
+
+header .links:hover ul {
+  display: block;
+}
+
+header .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none; /* text decoration pour enlver le surlignment*/
+  color: rgb(12, 10, 10);
+  transition: 0.5s;
+}
+
+header .links ul li a:hover {
+  padding-left: 25px;
+}
+
+header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid black;
 }
