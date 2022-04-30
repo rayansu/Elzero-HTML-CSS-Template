@@ -1,3 +1,7 @@
+/* start variable */
+:root {
+  --main-color: #10cab7;
+}
 /* start global rules */
 * {
   --webkit-box-sizing: border-box;
@@ -7,6 +11,7 @@
 
 body {
   font-family: "work Sans", sans-serif;
+  /* background-color: rgb(0, 0, 0); */
 }
 
 .container {
@@ -14,7 +19,6 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(0, 0, 0);
 }
 /* small */
 @media (min-width: 786px) {
@@ -34,17 +38,18 @@ body {
     width: 1170px;
   }
 }
-/* start global rules */
+/* end global rules */
 
 /* Start Header */
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 10px;
 }
 /* ajustement  de la taille du logo */
-header .logo {
-  width: 164px;
+.logo {
+  width: 120px;
 }
 
 /* création de l'icone manuellemnet  */
@@ -101,10 +106,11 @@ header .links ul {
   margin: 0px;
   position: absolute;
   right: 0px;
-  background-color: #aa866ce4;
+  background-color: #f6e8dfe4;
   padding: 31px;
   width: 15em;
   display: none;
+  z-index: 1;
 }
 
 header .links ul::before {
@@ -135,5 +141,48 @@ header .links ul li a:hover {
 }
 
 header .links ul li:not(:last-child) a {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(186, 75, 6);
+}
+
+.landing {
+  background-image: url(../Photos/photo-bouarfa-figuig/juli-kosolapova-Us_dv71f1bc-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-right: 15px;
+  margin-left: 15px;
+  height: calc(100vh - 110px);
+  position: relative;
+}
+.landing .intro-text {
+  position: absolute; /* absolute par raport a la page web , mais si en met son parent en postion relative , il sera absolute par raport a son parent  */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 100%;
+}
+
+.landing .intro-text h1 {
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.landing .intro-text p {
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* End landing section  */
+
+/* start features */
+.features{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color:
+
+}
+.features .container {
+  display: flex;
 }
